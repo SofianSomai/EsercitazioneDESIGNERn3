@@ -11,10 +11,7 @@ public class GestioneBrani {
     public void visualizzaBrani()
     {
 
-      for()
-      {
 
-      }
 
     }
 
@@ -26,7 +23,6 @@ public class GestioneBrani {
 
 
     }
-
 
 
 

@@ -2,6 +2,7 @@ package com.example.compitodesigner3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,14 +18,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent i = new Intent(getApplicationContext(), VisualizzaBrani.class);
         gb = new GestioneBrani();
+
         btnAggiungi.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
 
             }
+        });
+
+        btnVisualizza.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                i.putExtra("BRANI",gb.ListaBrani );
+                startActivity(i);
 
 
+            }
         });
 
 
