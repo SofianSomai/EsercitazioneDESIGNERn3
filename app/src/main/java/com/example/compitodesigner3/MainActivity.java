@@ -9,7 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
- EditText txtTitolo;
+ EditText txtTitolo = (EditText) findViewById(R.id.titolo1);
+ EditText txtBrano = (EditText) findViewById(R.id.titolo2);
  GestioneBrani gb;
  Button btnAggiungi = (Button)findViewById(R.id.button);
  Button btnVisualizza = (Button)findViewById(R.id.button2);
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         btnAggiungi.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+
+
 
             }
         });

@@ -1,5 +1,7 @@
 package com.example.compitodesigner3;
 
+import android.widget.EditText;
+
 import java.util.ArrayList;
 
 public class GestioneBrani {
@@ -15,11 +17,23 @@ public class GestioneBrani {
 
     }
 
-    public void addBrano(String titolo)
+    public void addBrano( String titolo, String genere)
     {
-      Brano br = new Brano(titolo);
+      Brano br = new Brano( titolo, genere);
       ListaBrani.add(br);
 
+
+
+    }
+    public String listaSong() {
+        StringBuilder sbSong = new StringBuilder();
+        for (Brano brc: ListaBrani) {
+
+            sbSong.append(brc.getTitolo().toString());
+            sbSong.append(brc.getGenere().toString()+"-");
+            sbSong.append("\n");
+        }
+        return sbSong.toString();
 
 
     }
